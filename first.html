@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Сайт видеа</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="bg-light p-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="index.html" class="mr-3">
+                <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Logo_da_Rolex.png/440px-Logo_da_Rolex.png" alt="" width="90">
+            </a>
+            <div class="info text-right">
+                <p>Группа ЭФБО-05-23<br> Кондрашин Илья Валерьевич</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Навигация</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="semesterDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Семестр
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="semesterDropdown">
+                            <a class="dropdown-item" href="first.html">Первый семестр</a>
+                            <a class="dropdown-item" href="https://rutube.ru/video/c6cc4d620b1d4338901770a44b3e82f4/">Второй семестр</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Услуги</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-4">
+        <div class="row">
+            <aside class="col-md-3">
+                <div class="sidebar_info">
+                    <h3>Навигация по странице</h3>
+                    <div class="sidebar_item"><a href="#lectures">Лекции</a></div>
+                    <div class="sidebar_item"><a href="#practices">Практики</a></div>
+                </div>
+            </aside>
+
+            <div class="col-md-9">
+                <div class="greetings">
+                    <h1 id="greetingHeader">Добро пожаловать на мой сайт</h1>
+                </div>
+                <div class="personal_info d-flex">
+                    <div class="text_info mr-3">
+                        <p>Меня зовут Кондрашин Илья Валерьевич и я начинающий специалист по веб разработке</p>
+                    </div>
+                    <div class="personal_img">
+                        <img src="https://i.pinimg.com/236x/8d/50/99/8d5099933888859ecd57e73682f76c0e.jpg?nii=t" alt="Собачка" class="img-fluid" id="studentPhoto">
+                    </div>
+                </div>
+
+                <button id="showLectures" class="btn btn-primary">Показать лекции</button>
+
+                <div id="lectures">
+                    <h2>Лекции</h2>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>№</th>
+                                    <th>Тема</th>
+                                    <th>Дата</th>
+                                    <th>Отметка о посещении</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Основы HTML</td>
+                                    <td>01.09.2024</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Основы CSS</td>
+                                    <td>08.09.2024</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>JavaScript для начинающих</td>
+                                    <td>15.09.2024</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Адаптивная верстка. Flexbox и Grid Layout</td>
+                                    <td>22.09.2024</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Bootstrap - работа с фреймворками</td>
+                                    <td>29.09.2024</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Основы языка JavaScript</td>
+                                    <td>06.10.2024</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Работа с DOM и событиями в JavaScript</td>
+                                    <td>13.10.2024</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Введение в GitHub и GitHub Pages</td>
+                                    <td>20.10.2024</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="practices" class="mt-4">
+                    <h2>Практики</h2>
+                    <button id="toggleSemester" class="btn btn-primary">Посмотреть практики второго семестра</button>
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="practicesTable">
+                            <thead>
+                                <tr>
+                                    <th>№</th>
+                                    <th>Тема</th>
+                                    <th>Дата</th>
+                                    <th>Выполнение</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Создание простой страницы</td>
+                                    <td>20.09.2024</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <!-- Добавьте остальные строки для первого семестра -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="map mt-4">
+                    <h3>Занятия проходят по адресу</h3>
+                    <p>Проспект Вернадского 78</p>
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aae9b34abd1c8c7942c6dc05635cbab08b20f71431f556e285cf36da52f937bf0&amp;source=constructor" width="100%" height="420" frameborder="0"></iframe>
+                </div>
+
+                <!-- Program Section -->
+                <div class="program mt-4">
+                    <h3>Рабочая программа</h3>
+                    <object class="pdf" 
+                            data="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210101201653/PDF.pdf"
+                            width="100%"
+                            height="500">
+                    </object>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <button id="scrollToTop" class="btn btn-primary" style="display: none; position: fixed; bottom: 70px; right: 30px;">Наверх</button>
+
+    <footer class="bg-light p-3">
+        <div class="container d-flex justify-content-between">
+            <div class="fio">
+                <p>© Кондрашин Илья Валерьевич, 2024</p>
+            </div>
+            <div class="icons">
+                <a href="">
+                    <img src="https://ppz-ural.ru/attachments/Image/prilozheniya-vkontakte.png?1533807009013" alt="" width="55">
+                </a>
+                <a href="">
+                    <img src="https://m" alt="" width="55">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('h1').addEventListener('click', function() {
+            alert('Вы кликнули на заголовок - так держать!');
+        });
+
+        document.querySelector('.text_info p').addEventListener('click', function() {
+            this.style.backgroundColor = this.style.backgroundColor === 'lightblue' ? '' : 'lightblue';
+        });
+
+        const toggleSemesterButton = document.getElementById('toggleSemester');
+        const practicesTableBody = document.querySelector('#practicesTable tbody');
+
+        const firstSemesterPractices = [
+            { number: 1, topic: 'Создание простой страницы', date: '20.09.2024' },
+            { number: 2, topic: 'Стилизация с использованием CSS', date: '27.09.2024' },
+            { number: 3, topic: 'Создание интерактивного элемента с помощью JS', date: '04.10.2024' },
+            { number: 4, topic: 'Основы работы HTML', date: '11.10.2024' },
+            { number: 5, topic: 'Работа с классами в CSS', date: '18.10.2024' },
+            { number: 6, topic: 'Работа с сетками и разметками CSS', date: '25.10.2024' },
+            { number: 7, topic: 'Адаптивная верстка', date: '01.11.2024' },
+            { number: 8, topic: 'Bootstrap', date: '08.11.2024' },
+            { number: 9, topic: 'Основы языка JavaScript', date: '15.11.2024' },
+            { number: 10, topic: 'Базовые задачи на JS', date: '22.11.2024' },
+            { number: 11, topic: 'DOM-структура приложений и работа с объектами в языке JS', date: '29.11.2024' },
+            { number: 12, topic: 'Встраивание скриптов', date: '06.12.2024' },
+            { number: 13, topic: 'Отладка сценариев', date: '13.12.2024' },
+            { number: 14, topic: 'Анимации и работа с ними', date: '20.12.2024' },
+            { number: 15, topic: 'GitHub', date: '27.12.2024' },
+            { number: 16, topic: 'Защита проекта', date: '03.01.2025' }
+        ];
+
+        const secondSemesterPractices = [
+            { number: 1, topic: 'Базовое бэкенд-приложение', date: '01.01.2025' },
+            { number: 2, topic: 'HTTP-запросы', date: '08.01.2025' },
+            { number: 3, topic: 'JSON и работа с ним', date: '15.01.2025' },
+            { number: 4, topic: 'HTTP-ответы', date: '22.01.2025' },
+            { number: 5, topic: 'Проектирование API', date: '29.01.2025' },
+            { number: 6, topic: 'Роутинг и его настройка', date: '05.02.2025' },
+            { number: 7, topic: 'NoSQL базы данных', date: '12.02.2025' },
+            { number: 8, topic: 'Обеспечение авторизации и доступа пользователей', date: '19.02.2025' },
+            { number: 9, topic: 'Работа сторонних сервисов уведомления и авторизации', date: '26.02.2025' },
+            { number: 10, topic: 'Основы ReactJS', date: '05.03.2025' },
+            { number: 11, topic: 'Работа с компонентами динамической DOM', date: '12.03.2025' },
+            { number: 12, topic: 'Использование хуков в React', date: '19.03.2025' },
+            { number: 14, topic: 'Основы микросервисной архитектуры', date: '26.03.2025' },
+            { number: 15, topic: 'Разработка классических модулей веб-приложений', date: '02.04.2025' },
+            { number: 16, topic: 'Разработка классических модулей веб-приложений', date: '09.04.2025' }
+        ];
+
+        function updateTable(practices) {
+            practicesTableBody.innerHTML = '';
+            practices.forEach(practice => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${practice.number}</td>
+                    <td>${practice.topic}</td>
+                    <td>${practice.date}</td>
+                    <td><input type="checkbox"></td>
+                `;
+                practicesTableBody.appendChild(row);
+            });
+        }
+
+        toggleSemesterButton.addEventListener('click', function() {
+            if (practicesTableBody.innerHTML.includes('Создание простой страницы')) {
+                updateTable(secondSemesterPractices);
+                toggleSemesterButton.textContent = 'Посмотреть практики первого семестра';
+            } else {
+                updateTable(firstSemesterPractices);
+                toggleSemesterButton.textContent = 'Посмотреть практики второго семестра';
+            }
+        });
+
+        updateTable(firstSemesterPractices);
+
+        const studentPhoto = document.getElementById('studentPhoto');
+        const favoriteTeacherPhoto = 'https://mf.b37mrtl.ru/rbthmedia/images/2018.09/original/5b8ce81015e9f9361d6ad224.jpg'; // Замените на реальный URL фотографии любимого преподавателя
+
+        studentPhoto.addEventListener('mouseover', function() {
+            this.style.width = '110%';
+            this.style.height = '110%';
+        });
+
+        studentPhoto.addEventListener('mouseout', function() {
+            this.style.width = '';
+            this.style.height = '';
+        });
+
+        studentPhoto.addEventListener('click', function() {
+            this.src = favoriteTeacherPhoto;
+        });
+
+        studentPhoto.addEventListener('dblclick', function() {
+            alert('Не налегай, у меня не так много любимых преподавателей');
+        });
+
+        document.getElementById('showLectures').addEventListener('click', function() {
+        const lecturesTable = document.getElementById('lectures');
+        if (!lecturesTable.classList.contains('show')) {
+            lecturesTable.classList.add('show');
+        } else {
+            lecturesTable.classList.remove('show');
+        }
+        });
+
+    </script>
+</body>
+</html>

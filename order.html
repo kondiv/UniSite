@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма заказа</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Форма заказа</h2>
+        <form id="orderForm">
+            <div class="form-group">
+                <label for="name">ФИО</label>
+                <input type="text" class="form-control" id="name" placeholder="Введите ваше ФИО" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Электронная почта</label>
+                <input type="email" class="form-control" id="email" placeholder="Введите вашу электронную почту" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Номер телефона</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Введите ваш номер телефона" required>
+            </div>
+            <div class="form-group">
+                <label for="product">Выберите товар</label>
+                <select class="form-control" id="product" required>
+                    <option value="">Выберите...</option>
+                    <option value="Товар 1">Сайт-Визитка</option>
+                    <option value="Товар 2">Корпоративный сайт</option>
+                    <option value="Товар 3">Интернет-магазин</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="additionalInfo">Дополнительная информация</label>
+                <textarea class="form-control" id="additionalInfo" rows="3" placeholder="Введите дополнительные комментарии..."></textarea>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="terms" required>
+                <label class="form-check-label" for="terms">Я согласен с условиями</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Подтвердить заказ</button>
+        </form>
+        <div class="text-center mt-3">
+            <div id="successMessage" class="success-message">Форма отправлена!</div>
+        </div>
+    </div>
+
+    <script>
+        const formData = {};
+
+        function submitForm(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const product = document.getElementById('product').value.trim();
+            const additionalInfo = document.getElementById('additionalInfo').value.trim();
+            const terms = document.getElementById('terms').checked;
+
+            if (!name || !email || !additionalInfo) {
+                alert("Заполните все обязательные поля: ФИО, Email, Комментарий.");
+                return;
+            }
+
+            const phonePattern = /^[0-9]+$/;
+            if (!phonePattern.test(phone)) {
+                alert("Номер телефона должен содержать только цифры.");
+                return;
+            }
+
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                alert("Введите корректный email.");
+                return;
+            }
+
+            formData.name = name;
+            formData.email = email;
+            formData.phone = phone;
+            formData.product = product;
+            formData.additionalInfo = additionalInfo;
+            formData.terms = terms;
+
+            printData();
+            showSuccessMessage();
+        }
+
+        function printData() {
+            console.log("Имя: " + formData.name);
+            console.log("E-mail: " + formData.email);
+            console.log("Телефон: " + formData.phone);
+            console.log("Товар: " + formData.product);
+            console.log("Комментарий: " + formData.additionalInfo);
+        }
+
+        function showSuccessMessage() {
+            const successMessage = document.getElementById('successMessage');
+            successMessage.classList.add('show');
+            setTimeout(() => {
+                successMessage.classList.remove('show');
+            }, 3000); // Сообщение будет скрыто через 3 секунды
+        }
+
+        const form = document.getElementById('orderForm');
+        form.addEventListener('submit', submitForm);
+    </script>
+    <script src="scriptForSemestrs.js" defer></script>
+</body>
+</html>

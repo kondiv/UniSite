@@ -1,0 +1,139 @@
+body {
+    font-family: 'Press Start 2P', cursive; /* Использование пиксельного шрифта */
+    background-color: #f5f5dc; /* Пастельный бежевый фон */
+    color: #6b4f4f; /* Темно-бежевый текст */
+    font-size: 12px; /* Уменьшение размера шрифта */
+}
+header {
+    background-color:#d8cfc4; /* Светло-бежевый фон для заголовка */
+}
+nav {
+    background-color: #d8cfc4; /* Светло-бежевый фон для навигации */
+}
+.navbar-nav .nav-link {
+    color: #6b4f4f; /* Темно-бежевый цвет для навигации */
+    padding: 10px 15px; /* Увеличение отступов для кнопок */
+}
+.navbar-nav .nav-link:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+    background-color: transparent; /* Убираем голубой цвет фона */
+}
+footer {
+    background-color: #d8cfc4; /* Светло-бежевый фон для подвала */
+    color: #4e3b3b; /* Темный текст */
+}
+.sidebar_info {
+    background-color: #fff; /* Белый фон для боковой панели */
+    border: 2px solid #6b4f4f; /* Темно-бежевый цвет границы */
+    padding: 10px; /* Уменьшение отступов */
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень для боковой панели */
+}
+.sidebar_info h3 {
+    font-size: 14px; /* Уменьшение размера шрифта заголовка */
+    margin-bottom: 10px; /* Отступ снизу для заголовка */
+}
+.greetings {
+    margin-bottom: 20px;
+}
+.personal_info {
+    margin-bottom: 20px;
+}
+.frontend {
+    background-color: #fff; /* Белый фон для секций фронтенда и бэкенда */
+    border: 2px solid #6b4f4f; /* Темно-бежевый цвет границы */
+    padding: 10px; /* Уменьшение отступов */
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень для секций */
+}
+#scrollToTop {
+    background-color: #6b4f4f; /* Темно-бежевый цвет кнопки */
+    color: #fff; /* Белый текст на кнопке */
+}
+
+.table {
+    background-color: #f8f9fa; /* Светлый фон таблицы */
+    color: #343a40; /* Темный цвет текста */
+}
+
+.table th {
+    background-color: #3b2a2a; /* Темный фон для заголовков */
+    color: #ffffff; /* Белый цвет текста для заголовков */
+}
+
+.table td {
+    border: 1px solid #dee2e6; /* Цвет границ ячеек */
+}
+
+.table tr:nth-child(even) {
+    background-color: #e9ecef; /* Светлый фон для четных строк */
+}
+
+.table tr:hover {
+    background-color: #d1d1d1; /* Цвет фона при наведении */
+}
+.btn-order {
+    background-color: #6b4f4f; /* Темно-бежевый цвет кнопки */
+    color: #fff; /* Белый текст на кнопке */
+}
+.btn-link {
+    color: #fff;
+}
+.accordion .card-header {
+    background-color: #3b2a2a; /* Темно-коричневый цвет */
+    color: #ffffff; /* Белый цвет текста заголовка */
+}
+.carousel-inner img {
+    width: 100%; /* Ширина 100% от родительского элемента */
+    height: 350px; /* Фиксированная высота */
+    object-fit: cover; /* Обрезка изображения, чтобы оно заполнило контейнер */
+}
+.card {
+    height: 100%; /* Устанавливаем карточкам одинаковую высоту */
+}
+.accordion-container {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+h1 {
+    transition: transform 0.3s ease;
+}
+
+h1:hover {
+    transform: scale(1.1);
+}
+
+.text_info p {
+    transition: background-color 0.5s ease;
+}
+
+#lectures {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    max-height: 0;
+    overflow: hidden;
+}
+
+#lectures.show {
+    opacity: 1;
+    max-height: 500px;
+}
+
+#studentPhoto {
+    transition: transform 0.5s ease;
+}
+
+#studentPhoto:hover {
+    transform: rotate(360deg);
+}
+
+.success-message {
+    display: none;
+    font-weight: bold;
+    transition: color 0.5s ease;
+}
+
+.success-message.show {
+    display: block;
+    color: green;
+}
